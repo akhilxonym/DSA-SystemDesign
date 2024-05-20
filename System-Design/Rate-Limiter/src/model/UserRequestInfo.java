@@ -1,11 +1,28 @@
 package src.model;
 
 public class UserRequestInfo {
-    int windowSize;
+    long windowStartTs;
     int requestCount;
 
-    UserRequestInfo(int windowSize, int requestCount) {
+    public UserRequestInfo(long windowStartTs, int requestCount) {
         this.requestCount = requestCount;
-        this.windowSize = windowSize;
+        this.windowStartTs = windowStartTs;
     }
+
+    public long getwindowStartTs() {
+        return windowStartTs;
+    }
+
+    public void setwindowStartTs(long windowStartTs) {
+        this.windowStartTs = windowStartTs;
+    }
+
+    public int getRequestCount() {
+        return requestCount;
+    }
+
+    public void setRequestCount(int requestCount) {
+        this.requestCount = requestCount;
+    }
+
 }

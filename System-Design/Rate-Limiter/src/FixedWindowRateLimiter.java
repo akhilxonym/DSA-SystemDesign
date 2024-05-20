@@ -18,7 +18,21 @@ public class FixedWindowRateLimiter implements RateLimiterStrategy {
 
     @Override
     public synchronized boolean allowRequest(String userId) {
+        long currTime = System.currentTimeMillis() / 1000;
+        long windowStartTs = (currTime / windowSize) * windowSize;
 
+        UserRequestInfo userRequestInfo = userRequests.getOrDefault(userId, new UserRequestInfo(windowStartTs, 0));
+
+        if (userRequestInfo.getwindowStartTs() < maxRequests) {
+            userRequestInfo.setRequestCount(userRequestInfo.getRequestCount() + 1);
+            userRequests.put(userId, userRequestInfo);
+            return true;
+        }
+
+        if (userRequestInfo.getwindowStartTs() != windowStartTs) {
+            userRequestInfo.setwindowStartTs(windowStartTs);
+            userRequestInfo.setRequestCount(0);
+        }
         return false;
     }
 
