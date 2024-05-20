@@ -14,7 +14,7 @@ public class App {
             } else {
                 System.out.println("Request " + (i + 1) + " not allowed for user101");
             }
-            if (i == 6) {
+            if (i >= 6) {
                 if (rateLimiter.allowRequest("user201")) {
                     System.out.println("Request " + (i + 1) + " allowed " + " for user201");
                 } else {
