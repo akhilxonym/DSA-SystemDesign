@@ -3,7 +3,6 @@ package src.test.java.src;
 import org.junit.Assert;
 import org.junit.Test;
 
-import src.App;
 import src.FixedWindowRateLimiter;
 import src.RateLimiter;
 import src.RateLimiterStrategy;

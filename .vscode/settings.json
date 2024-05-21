@@ -1,5 +1,6 @@
 {
     "java.project.sourcePaths": [
-        "System-Design/Rate-Limiter"
+        "System-Design/Rate-Limiter",
+        "DSA/Binary-Search"
     ]
 }

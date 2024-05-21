@@ -6,9 +6,9 @@ import java.util.Map;
 import src.model.UserRequestInfo;
 
 public class FixedWindowRateLimiter implements RateLimiterStrategy {
-    private final int maxRequests;
-    private final int windowSize;
-    private final Map<String, UserRequestInfo> userRequests;
+    protected final int maxRequests;
+    protected final int windowSize;
+    protected final Map<String, UserRequestInfo> userRequests;
 
     public FixedWindowRateLimiter(int maxRequests, int windowSize) {
         this.maxRequests = maxRequests;
