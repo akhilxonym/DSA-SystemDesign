@@ -1,6 +1,8 @@
 {
     "java.project.sourcePaths": [
         "System-Design/Rate-Limiter",
-        "DSA/Binary-Search"
-    ]
+        "DSA/Binary-Search/problem-1",
+        "DSA/Prefix-Sum/problem-1"
+    ],
+    "java.debug.settings.onBuildFailureProceed": true
 }

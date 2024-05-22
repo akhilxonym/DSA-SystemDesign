@@ -39,3 +39,12 @@ n == nums.length
 -5000 <= nums[i] <= 5000
 All the integers of nums are unique.
 nums is sorted and rotated between 1 and n times.
+
+
+
+
+1 2 3 4 5 6 7
+
+6 7 1 2 3 4 5
+
+
